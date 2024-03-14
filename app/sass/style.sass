@@ -1,6 +1,61 @@
 @import "vars"
 @import "fonts"
 
+//start global style
+body 
+    font-family: $main-font
+    font-size: 18px 
+    font-weight: 300
+    color: $black
+.container-fluid 
+    padding-left: 0 
+    padding-right: 0 
+    width: 1400px 
+    max-width: 90vw
+//end global style
+
+//start header style
+.header
+    background: $black 
+    padding-top: 15px 
+    padding-bottom: 15px
+    color: #fff
+    .container-fluid 
+        display: flex 
+        justify-content: space-between 
+        align-items: center
+.menu 
+    ul 
+        padding: 0 
+        margin: 0 
+        list-style: none 
+        display: flex
+        align-items: center
+    a 
+        list-style: none
+        color: #fff 
+        font-size: 16px 
+        font-weight: 600
+        text-decoration: none
+    li 
+        margin-left: 60px
+    li:last-child  
+        a
+            background: $blue-grey 
+            color: $black
+            height: 50px 
+            width: 180px 
+            display: flex 
+            justify-content: center 
+            align-items: center
+            border-radius: 50px
+    li:last-child:hover 
+        a 
+            background: $blue
+.logo 
+    img 
+        width: 160px
+//end header style
 
 
 
