@@ -5,21 +5,80 @@
 body 
     font-family: $main-font
     font-size: 18px 
-    font-weight: 300
+    font-weight: 400
     color: $black
+    background: #EAEAEA
+
+
 .container-fluid 
     padding-left: 0 
     padding-right: 0 
-    width: 1400px 
+    width: 1260px 
     max-width: 90vw
+.h1 
+    font-weight: 700 
+    font-family: $secondary-font
+    font-size: 4.688vw
+    margin-bottom: 0
+    line-height: 1.2
+    span
+        background: linear-gradient(90.83deg, #CD96E5 31.11%, #9772FE 81.19%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+.h2 
+    font-size: 48px 
+    font-family: $secondary-font
+    text-align: center
+    font-weight: 600
+    line-height: 1.5
+    margin-top: 0
+.h3 
+    font-family: $secondary-font 
+    font-weight: 600
+    font-size: 36px
+    margin-bottom: 18px
+.h4 
+    margin-top: 12px 
+    margin-bottom: 12px 
+    font-weight: 600
+    font-family: $secondary-font
+
+p 
+    margin-top: 15px
+    line-height: 1.5
+.sub-title 
+    text-align: center 
+    font-size: 18px 
+    margin-top: 30px
+    margin-bottom: 30px
+.button 
+    height: 55
+    width: 230px
+    color: #fff 
+    text-decoration: none 
+    background: $black
+    display: flex 
+    justify-content: center
+    align-items: center
+    border-radius: 100px
+    font-size: 22px
+    font-weight: 600
+
 //end global style
+
+
 
 //start header style
 .header
-    background: $black 
     padding-top: 15px 
     padding-bottom: 15px
     color: #fff
+    position: fixed
+    transition: all 1s
+    width: 100%
+    z-index: 999
     .container-fluid 
         display: flex 
         justify-content: space-between 
@@ -33,30 +92,277 @@ body
         align-items: center
     a 
         list-style: none
-        color: #fff 
+        color: $black
         font-size: 16px 
         font-weight: 600
         text-decoration: none
+        position: relative
+    a::after 
+        content: ''
+        position: absolute
+        left: 0 
+        top: 110% 
+        background: $black 
+        width: 0
+        display: block
+        height: 2px
+        transition: all 0.3s
+    a:hover::after 
+        width: 100%
     li 
         margin-left: 60px
+    
     li:last-child  
         a
-            background: $blue-grey 
             color: $black
-            height: 50px 
-            width: 180px 
+            height: 45px 
+            width: 120px 
             display: flex 
             justify-content: center 
             align-items: center
             border-radius: 50px
+            transition: all .3s
+            border: 1px solid $black
+            background: #E5E5E5
+        a::after 
+            display: none
     li:last-child:hover 
         a 
-            background: $blue
+            color: #fff
+            border: none
+            background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
 .logo 
     img 
         width: 160px
+.header.sticky 
+    position: fixed 
+    background: rgba(#402366, .8)
+    width: 100%
+    padding-top: 10px 
+    padding-bottom: 10px
+    li 
+        a 
+            color: #fff
+        a:after 
+            background: #fff
+    li:last-child a
+        color: #fff 
+        border: none
+        background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
+    li:last-child:hover 
+        a 
+            background: #fff
+            color: $black
+            border-color: $black
+.header.sticky 
+    .logo 
+        svg
+            fill: #fff
+
 //end header style
 
+//start main screen 
+.main-screen 
+    height: 51.042vw
+    background: url('../img/main-screen.png')
+    background-size: 100vw
+    background-position: center
+    position: relative
+    padding-top: 9.063vw
+    p 
+        font-size: 1.146vw
+        margin-top: 1.563vw
+        margin-bottom: 2.604vw
+    .container-fluid 
+        display: flex
+        justify-content: flex-end
+        width: 1400px
+        max-width: 75vw
+    .button 
+        height: 2.865vw
+        width: 11.979vw
+        color: #fff 
+        text-decoration: none 
+        background: $black
+        display: flex 
+        justify-content: center
+        align-items: center
+        border-radius: 100px
+        font-size: 1.146vw
+        font-weight: 600
+.button:hover 
+    background: #4B2574
+    color: #fff
+.logo 
+    svg 
+        width: 200px   
+        height: 74px
+        fill: #11042A
+        transition: all 1s
+.phone-wrapper
+    position: absolute 
+    left: 0 
+    top: 1vw
+.phone-img 
+    width: 40vw   
+.screen 
+    position: absolute 
+    top: 4.1vw
+    left: 5.9vw
+    width: 31.5vw
+    opacity: 0
+    transition: opacity 0.5s ease
+.screen.active 
+    opacity: 1
+.screen-1 
+    z-index: 9
+.main-screen__content
+    width: 39vw
+//end main screen 
+
+//start about style 
+.about
+    background: linear-gradient(180deg, #8446B3 0%, #402366 100%)
+    padding-top: 150px 
+    padding-bottom: 150px
+    color: #fff
+    p 
+        width: 500px 
+        max-width: 100%
+        line-height: 1.5
+    .col-lg-5,
+    .col-lg-7,
+    .col-lg-6
+        margin-top: 45px
+    .col-lg-5,
+    .col-lg-6
+        display: flex
+        align-items: center
+.about__item-img
+    max-width: 100%
+    display: block 
+    margin-left: auto 
+    margin-right: auto
+.about__item-img--left
+    margin-left: 0
+.about .no-margin 
+    margin-top: 0
+//end about style
+
+//start services style
+.services
+    padding-top: 100px 
+    padding-bottom: 100px 
+    .h2 
+        margin-bottom: 40px
+    .col-lg-4 
+        margin-top: 23px
+.services__item
+    background: rgba(#fff, 0.5)
+    border: 1px solid #E2E2EC
+    border-radius: 16px
+    padding: 32px
+    min-height: 100%
+    p 
+        font-size: 16px
+//end services style
+
+//start dsahboard style 
+.dashboard
+    background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
+    padding-top: 100px 
+    padding-bottom: 100px
+    color: #fff
+    .col-lg-5 
+        display: flex 
+        align-items: center
+    img 
+        max-width: 100%
+    p 
+        width: 400px 
+        max-width: 100%
+    .h2 
+        text-align: left
+        span 
+            color: $black
+    .button 
+        height: 55px 
+        width: 230px
+        margin-top: 40px
+
+//end dashboard style
+
+//start contact style 
+.contact 
+    padding-top: 100px 
+    padding-bottom: 100px
+    .h2 
+        margin-bottom: 40px
+        span
+            background: linear-gradient(150.83deg, #CD96E5 31.11%, #9772FE 81.19%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+    input,
+    textarea
+        display: block 
+        width: 100%
+        margin-top: 25px
+        height: 60px
+        border-radius: 22px
+        border: 1px solid rgba(#270C41, .5)
+        background: rgba(#fff, .7)
+        outline: none
+        padding: 0 38px
+        font-family: $main-font
+    textarea 
+        padding-top: 20px
+        height: 200px
+.contact-form
+    width: 780px 
+    max-width: 100% 
+    margin-left: auto 
+    margin-right: auto
+.submit-button 
+    margin-top: 60px 
+    height: 55px 
+    width: 340px 
+    max-width: 100%
+    border: none 
+    margin-left: auto 
+    margin-right: auto
+    background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
+.contact input,
+.contact textarea
+    padding-left: 20px 
+    padding-right: 20px
+
+//end contact style 
+
+.footer 
+    background: $black
+    padding-top: 50px 
+    padding-bottom: 50px
+    a 
+        color: #fff 
+        text-decoration: none
+    .container-fluid 
+        display: flex 
+        justify-content: space-between
+        align-items: center
+.footer__menu
+    display: flex 
+    align-items: center
+    a 
+        margin-left: 40px 
+        display: block
+.social
+    display: flex 
+    align-items: center
+    a 
+        margin-left: 10px 
+        display: block
 
 
 @import "media"
