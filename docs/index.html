@@ -449,5 +449,20 @@ $("#form").submit(function() {
         $('body,html').animate({ scrollTop: top }, 1500);
     });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script>
+// Проверяем, что браузер поддерживает touch события
+if (Modernizr.touch) {
+ 
+  document.addEventListener("DOMContentLoaded", function() {
+    const animatedElements = document.querySelectorAll('.animate__animated');
+    animatedElements.forEach(function(element) {
+      element.classList.remove('animate__animated');
+    });
+  });
+}
+</script>
+
 </body>
 </html>
