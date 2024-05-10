@@ -6,8 +6,8 @@ body
     font-family: $main-font
     font-size: 18px 
     font-weight: 400
-    color: $black
-    background: #EAEAEA
+    color: #fff
+    background: #000
     min-height: 100vh
 
 
@@ -19,15 +19,12 @@ body
 .h1 
     font-weight: 700 
     font-family: $secondary-font
-    font-size: 4.688vw
+    font-size: 5.208vw
     margin-bottom: 0
     line-height: 1.2
     span
-        background: linear-gradient(90.83deg, #CD96E5 31.11%, #9772FE 81.19%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        background-clip: text
-        text-fill-color: transparent
+        color: $black
+
 .h2 
     font-size: 48px 
     font-family: $secondary-font
@@ -93,7 +90,7 @@ p
         align-items: center
     a 
         list-style: none
-        color: $black
+        color: #fff
         font-size: 16px 
         font-weight: 600
         text-decoration: none
@@ -103,7 +100,7 @@ p
         position: absolute
         left: 0 
         top: 110% 
-        background: $black 
+        background: #fff
         width: 0
         display: block
         height: 2px
@@ -115,7 +112,7 @@ p
     
     li:last-child  
         a
-            color: $black
+            color: #fff
             height: 45px 
             width: 120px 
             display: flex 
@@ -123,21 +120,20 @@ p
             align-items: center
             border-radius: 50px
             transition: all .3s
-            border: 1px solid $black
-            background: #E5E5E5
+            border: 1px solid #fff
         a::after 
             display: none
     li:last-child:hover 
         a 
             color: #fff
             border: none
-            background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
+            background: $black
 .logo 
     img 
         width: 160px
 .header.sticky 
     position: fixed 
-    background: rgba(#402366, .8)
+    background: rgba(#000, .8)
     width: 100%
     padding-top: 10px 
     padding-bottom: 10px
@@ -147,13 +143,13 @@ p
         a:after 
             background: #fff
     li:last-child a
-        color: #fff 
+        color: #000
         border: none
-        background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
+        background: #fff
     li:last-child:hover 
         a 
-            background: #fff
-            color: $black
+            background: $black
+            color: #fff
             border-color: $black
 .header.sticky 
     .logo 
@@ -165,6 +161,7 @@ p
 //start main screen 
 .main-screen 
     height: 51.042vw
+    background-color: #000
     background: url('../img/main-screen.png')
     background-size: 100vw
     background-position: center
@@ -192,13 +189,13 @@ p
         font-size: 1.146vw
         font-weight: 600
 .button:hover 
-    background: #4B2574
+    background: #2A02A1
     color: #fff
 .logo 
     svg 
         width: 200px   
         height: 74px
-        fill: #11042A
+        fill: #fff
         transition: all 1s
 .phone-wrapper
     position: absolute 
@@ -218,15 +215,18 @@ p
 .screen-1 
     z-index: 9
 .main-screen__content
-    width: 39vw
-//end main screen 
+    width: 30vw
+    margin-right: 18vw
+//end main screen
+     
 
 //start about style 
 .about
-    background: linear-gradient(180deg, #8446B3 0%, #402366 100%)
     padding-top: 150px 
     padding-bottom: 150px
     color: #fff
+    background: url('../img/top.png') no-repeat top center, url('../img/bottom.png') no-repeat bottom center
+    background-size: 100vw
     p 
         width: 500px 
         max-width: 100%
@@ -252,14 +252,19 @@ p
 
 //start services style
 .services
-    padding-top: 100px 
-    padding-bottom: 100px 
+    padding-top: 70px 
+    padding-bottom: 100px
+    background-color: #000
+    background-image: url('../img/bottom.png')
+    background-size: 100vw
+    background-position: bottom center
+    background-repeat: no-repeat
     .h2 
         margin-bottom: 40px
     .col-lg-4 
         margin-top: 23px
 .services__item
-    background: rgba(#fff, 0.5)
+    background: #000
     border: 1px solid #E2E2EC
     border-radius: 16px
     padding: 32px
@@ -270,9 +275,8 @@ p
 
 //start dsahboard style 
 .dashboard
-    background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
     padding-top: 100px 
-    padding-bottom: 100px
+    padding-bottom: 50px
     color: #fff
     .col-lg-5 
         display: flex 
@@ -297,14 +301,15 @@ p
 .contact 
     padding-top: 100px 
     padding-bottom: 100px
+    background: url('../img/contact.png')
+    background-position: top right
+    background-size: 75vw
+    background-repeat: no-repeat
     .h2 
         margin-bottom: 40px
+        text-align: left
         span
-            background: linear-gradient(150.83deg, #CD96E5 31.11%, #9772FE 81.19%)
-            -webkit-background-clip: text
-            -webkit-text-fill-color: transparent
-            background-clip: text
-            text-fill-color: transparent
+            color: $black
     input,
     textarea
         display: block 
@@ -312,8 +317,8 @@ p
         margin-top: 25px
         height: 60px
         border-radius: 22px
-        border: 1px solid rgba(#270C41, .5)
-        background: rgba(#fff, .7)
+        border: 1px solid #fff
+        background: transparent
         outline: none
         padding: 0 38px
         font-family: $main-font
@@ -321,9 +326,9 @@ p
         padding-top: 20px
         height: 200px
 .contact-form
-    width: 780px 
+    width: 690px 
     max-width: 100% 
-    margin-left: auto 
+    margin-left: 0
     margin-right: auto
 .submit-button 
     margin-top: 60px 
@@ -331,9 +336,8 @@ p
     width: 340px 
     max-width: 100%
     border: none 
-    margin-left: auto 
+    margin-left: 0 
     margin-right: auto
-    background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
 .contact input,
 .contact textarea
     padding-left: 20px 
@@ -342,7 +346,7 @@ p
 //end contact style 
 
 .footer 
-    background: $black
+    background: #000
     padding-top: 50px 
     padding-bottom: 50px
     a 
@@ -360,7 +364,8 @@ p
         display: block
         font-size: 16px
     a:hover 
-        background: linear-gradient(90.83deg, #CD96E5 31.11%, #9772FE 81.19%)
+        background: #fff
+        opacity: 0.8
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
         background-clip: text

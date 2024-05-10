@@ -1,14 +1,20 @@
 @import "vars"
 
 /*==========  Desktop First  ==========*/
-
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1300px)
+@media only screen and (max-width : 1500px)
+	/**/
+	.contact
+		background-position: right center
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1335px)
 	/**/
 	.main-screen 
 		padding-top: 10vw
 	.phone-wrapper
 		top: 4vw
+	.contact-form
+		width: 50vw
 @media only screen and (max-width : 1200px)
 	.footer__menu
 		a 
@@ -41,7 +47,7 @@
 		width: 30px 
 		height: 3px 
 		margin-bottom: 6px 
-		background: $black 
+		background: #fff 
 		border-radius: 10px
 	.menu-row:last-child 
 		margin-bottom: 0
@@ -63,7 +69,7 @@
 		top: 100%
 		width: 100%
 		left: 0
-		background: $black
+		background: #000
 		padding-top: 20px 
 		padding-bottom: 20px
 		min-height: calc(100vh - 84px)
@@ -79,16 +85,17 @@
 				a 
 					color: #fff
 					border: none
-					background: linear-gradient(180deg, #CD96E5 0%, #9D76FB 100%)
+					background: $black 
 	.main-screen
 		height: auto
-		background-position: bottom -20vw left -36vw
+		background-size: 370vw 
+		background-position: right -65vw bottom
 		background-repeat: no-repeat
-		background-size: 290vw
-		background-color: #e5e5e5
 		padding-top: 20px
 		.container-fluid 
 			justify-content: flex-start
+	.main-screen__content
+		margin-right: 0
 	.phone-wrapper
 		position: relative
 		top: 24vw
@@ -133,7 +140,7 @@
 	.phone-img
 		width: 95vw
 	.header.active 
-		background: rgba(#402366, 1)
+		background: #000
 		.logo 
 			svg 
 				fill: #fff
@@ -169,15 +176,20 @@
 			width: 100%
 	.dashboard
 		padding-top: 80px 
-		padding-bottom: 80px
-		.row 
-			display: flex 
-			flex-direction: column-reverse
+		padding-bottom: 0px
 	.header.sticky 
 		.menu-row
 			background: #fff
 	.dashboard img 
 		width: 100%
+	.main-screen p
+		max-width: 65vw
+	.contact-form
+		width: 100%
+	.contact 
+		background-position: top right 
+		background-size: 104vw
+		padding-top: 41vw
 	
 
 
@@ -212,8 +224,8 @@
 	.main-screen__content
 		top: 100px
 	.about 
-		padding-top: 60px 
-		padding-bottom: 60px
+		padding-top: 120px 
+		padding-bottom: 120px
 	.h3 
 		font-size: 23px
 	.h2 
@@ -243,15 +255,14 @@
 			margin-bottom: 20px
 	.services 
 		padding-top: 60px 
-		padding-bottom: 60px
+		padding-bottom: 120px
 		.h2 
 			margin-bottom: 10px
 	.dashboard 
 		.button 
 			width: 100%
 	.contact 
-		padding-top: 60px 
-		padding-bottom: 60px
+		padding-bottom: 60px 
 		.h2 
 			margin-bottom: 20px
 	
@@ -306,7 +317,8 @@
 		p 
 			font-size: 22px
 	.main-screen__content
-		width: 760px
+		width: 600px
+		
 	.button
 		height: 55px
 		width: 230px
