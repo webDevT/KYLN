@@ -409,8 +409,11 @@ Effortlessly with <img src="img/white-logo.svg" alt="">
     // Показываем первый экран
     screens[currentScreenIndex].classList.add('active');
 
-    // Запускаем переключение каждые 5 секунд
-    setInterval(showNextScreen, 10000);
+    // Задержка 5 секунд до начала выполнения скрипта
+    setTimeout(function() {
+        // Запускаем переключение каждые 5 секунд
+        setInterval(showNextScreen, 5000);
+    }, 5000);
 });
 
 	</script>
